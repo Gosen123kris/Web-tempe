@@ -1,0 +1,151 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tempe Penyet Spesial</title>
+    <style>
+    
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        #top {
+            background-color: #ccc;
+            padding: 1em;
+            text-align: center;
+        }
+        
+
+        /* Sub-menu navigation */
+        nav {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            padding: 14px 20px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background-color: #0056b3;
+        }
+
+        /* Hidden content by default */
+        .content {
+            display: none;
+            margin: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+        }
+
+        .active {
+            display: block;
+        }
+
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Section -->
+    <div id="top">
+        <h1>Tempe Penyet Spesial</h1>
+        <p class="intro">(Masakan Jawa Timur)</p>
+        <p class="intro">Dimakan dengan menggunakan lalapan</p>
+          
+    </div>
+  
+  
+
+    <!-- Navigation (Sub-menu) -->
+    <nav>
+        <a href="#" onclick="showContent('resep')">Resep</a>
+        <a href="#" onclick="showContent('bahan')">Bahan-Bahan</a>
+        <a href="#" onclick="showContent('cara')">Cara Membuat</a>
+        <a href="#" onclick="showContent('tips')">Tips</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content" id="resep">
+        <h2>Resep Tempe Penyet Spesial</h2>
+        <p>Tempe penyet adalah makanan khas Indonesia yang mudah dibuat dan lezat disantap bersama sambal dan nasi hangat.</p>
+    </div>
+    
+
+    <div class="content" id="bahan">
+        <h2>Bahan-Bahan</h2>
+        <ul>
+            <li>1 papan tempe</li>
+	<p align="left"><img border="0" src="Toso.jpg" width="150" height="100">
+            <li>4 siung bawang putih</li>
+            <p align="left"><img border="0" src="bawang.jpg" width="150" height="100">
+            <li>10 buah cabai rawit</li>
+            <p align="left"><img border="0" src="cabe.jpg" width="150" height="100">
+            <li>1 buah tomat</li>
+            <p align="left"><img border="0" src="tomat.jpg" width="150" height="100">
+            <li>Garam secukupnya</li>
+            <p align="left"><img border="0" src="garam.jpg" width="150" height="100">
+            <li>Minyak goreng secukupnya</li>
+            <p align="left"><img border="0" src="minyak.jpg" width="150" height="100">
+        </ul>
+    </div>
+
+    <div class="content" id="cara">
+        <h2>Cara Membuat</h2>
+        <ol>
+            <li>Goreng tempe hingga kuning kecoklatan, tiriskan.</li>
+            <li>Ulek bawang putih, cabai, tomat, dan garam hingga halus.</li>
+            <li>Masukkan tempe ke dalam ulekkan sambal, penyet-penyet hingga tercampur rata.</li>
+            <li>Sajikan dengan nasi hangat dan lalapan.</li>
+        </ol>
+    </div>
+
+    <div class="content" id="tips">
+        <h2>Tips</h2>
+        <p>Untuk rasa yang lebih pedas, tambahkan cabai rawit sesuai selera. Pastikan tempe digoreng dengan minyak panas agar renyah.</p>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Tempe Penyet Spesial. All Rights Reserved.
+    </footer>
+
+    <script>
+        // Function to show content based on sub-menu clicked
+        function showContent(contentId) {
+            // Hide all content sections
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Show the selected section
+            var selectedContent = document.getElementById(contentId);
+            if (selectedContent) {
+                selectedContent.classList.add('active');
+            }
+        }
+    </script>
+    
+
+</body>
+
+</html>
